@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Message>
+    <person> 
+        <name>Ashley</name>
+        <age>23</age>
+        <hobby> reading , travelling </hobby>
+    </person>
+    
+     <person> 
+        <name>bob</name>
+        <age>24</age>
+        <hobby> playing  </hobby>
+    </person>
+     <person> 
+        <name>calvin</name>
+        <age>25</age>
+        <hobby> singing </hobby>
+    </person>
+     <person> 
+        <name>dan</name>
+        <age>26</age>
+        <hobby> acting</hobby>
+    </person>
+     <person> 
+        <name>Eli</name>
+        <age>27</age>
+        <hobby> video games </hobby>
+    </person>
+     <person> 
+        <name>frank</name>
+        <age>26</age>
+        <hobby> running , travelling </hobby>
+    </person>
+     <person> 
+        <name>george</name>
+        <age>25</age>
+        <hobby> reading , travelling </hobby>
+    </person>
+     <person> 
+        <name>han</name>
+        <age>24</age>
+        <hobby>  travelling </hobby>
+    </person>
+     <person> 
+        <name>ian</name>
+        <age>23</age>
+        <hobby> reading  </hobby>
+    </person>
+     <person> 
+        <name>jack</name>
+        <age>22</age>
+        <hobby>  travelling </hobby>
+    </person>
+    
+</Message>
