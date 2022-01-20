@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<cards>
+  <card>
+    <Name>Joe Marani</Name>
+    <phoneno type ="home">+1 (415) 555-1234</phoneno>
+    <phoneno type="work">+1 (800) 555-9867</phoneno>
+    <phoneno type="mobile">+1 (510) 555-1212</phoneno>
+    <email>joe@joe.com</email>
+ </card>
+
+
+
+
+
+
+
+ </cards>
