@@ -1,0 +1,15 @@
+menu menuItem itemName originalName {
+     font-size: larger;
+     
+  }
+  
+  menu category {
+    display: block;
+    
+    
+  }
+  title{
+      font-style: italic;
+      color: rgb(214, 16, 16);
+  }
+
