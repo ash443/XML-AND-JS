@@ -1,6 +1,6 @@
 # Assignment Answers
 1. For the DTD file of Assignment , i Started with the Assignment.xml file . i created the in line DTD by including the elements fron the xml schema, after that i added the attributes for the elements.
-then copied the code to Xmlvatidation.com and checked for errors , after solving some errors, i took a screenshot of the validation message from the site.
+then copied the code to Xmlvatidation.com and checked for errors , after solving some errors, i took a screenshot of the validation message from the site. then i created a separate dtd file . 
 
 ![image info](Assignment_screenshots/1.png)
 
