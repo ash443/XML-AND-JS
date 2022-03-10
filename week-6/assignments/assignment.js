@@ -1,6 +1,6 @@
 const htmlToElement = (html) => {
     const template = document.createElement("template");
-    html = html.trim(); // Never return a text node of whitespace as the result
+    html = html.trim(); 
     template.innerHTML = html;
     return template.content.firstChild;
   };
@@ -19,13 +19,6 @@ const htmlToElement = (html) => {
   const generateTableRow = (item) => {
 
     const id = Array.from(item.getElementsByTagName(`id`))[0].textContent;
- /*   let name = Array.from(item.getElementsByTagName(`first_name`)).map(
-      ({ textContent }) => textContent
-    );
-
-    name.push (Array.from(item.getElementsByTagName(`last_name`)).map(
-      ({ textContent }) => textContent
-    ));*/
     const fname = Array.from(item.getElementsByTagName(`first_name`))[0].textContent;
     const lname = Array.from(item.getElementsByTagName(`last_name`))[0].textContent;
     const email = Array.from(item.getElementsByTagName(`email`))[0].textContent;
