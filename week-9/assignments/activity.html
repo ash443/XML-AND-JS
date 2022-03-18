@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <title>Assignment</title>
+  </head>
+  <body>
+    <form onreset="onReset(event)" onsubmit="onSubmit(event)">
+      <input
+        type="text"
+        name="name"
+        id="input-name-term"
+        placeholder="Enter name"
+        size="20"
+      />
+      <button type="submit">Apply filter</button>
+      <button type="reset">Reset</button>
+    </form>
+    <table >
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>firstName</th>
+                <th>lastname</th>
+                <th>email</th>
+                <th>gender</th>
+                <th>ip adresses</th>
+              </tr>
+        </thead>
+        <tbody id="table-main">
+        </tbody>
+    </table>
+    <script type="text/javascript" src="activity.js"></script>
+  </body>
+</html>
