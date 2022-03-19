@@ -18,10 +18,7 @@ const loadData = (path) =>
       throw new Error("No table element found");
     }
 
-    
-   
-  
-    if (nameTerm) {
+     if (nameTerm) {
       source = source.filter(({ first_name }) => first_name.toLowerCase().includes(nameTerm));
     }
   
@@ -38,9 +35,7 @@ const loadData = (path) =>
 
   const onSubmit = (event) => {
     event.preventDefault();
-  
     const term = event.target.name.value;
-  
     loadData(`activity.json`).then((data) => renderTable(data, term));
   };
   

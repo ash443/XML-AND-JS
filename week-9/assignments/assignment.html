@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>people table</title>
+  </head>
+  <body>
+    <form onreset="onReset(event)" onsubmit="onSubmit(event)">
+      <input
+        type="text"
+        name="name"
+        id="input-name-term"
+        placeholder="Enter name"
+        size="20"
+      />
+      <button type="submit">Apply filter</button>
+      <button type="reset">Reset</button>
+    </form>
+    <table>
+      <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Ip_Address</th>
+      </thead>
+      <tbody id="table-body"></tbody>
+  </table>
+    <script type="text/javascript" src="assignment.js"></script>
+  </body>
+</html>
+
+
