@@ -50,11 +50,11 @@ const htmlToElement = (html) => {
 
     if(nameTerm) {
       nodes = nodes.filter((node) => Array.from(node.getElementsByTagName('first_name'))[0].textContent.toLowerCase().includes(nameTerm)
-          || Array.from(node.getElementsByTagName('last_name'))[0].textContent.toLowerCase().includes(nameTerm)
+          
       )
   }
 
-  tableBody.innerHTML = '';
+  
     nodes.map((studentNode) =>
       table.appendChild(htmlToElement(generateTableRow(studentNode)))
     );
