@@ -1,7 +1,7 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-    const cars = require("../data/mock_data.json");
+    const cars = require("../data/MOCK_DATA.json");
     
-    const getAllCars = (term, cars_brand, valueTerm) =>
+    const getAllCars = (term, valueTerm) =>
       new Promise((resolve) => {
         let data = cars;
     
@@ -12,7 +12,6 @@
                 case "first_name":
                     data = data.filter((car) => car.first_name.toLowerCase().includes(valueTerm));
                     break;
-                
                 case "gender":
                     data = data.filter((car) => car.gender.toLowerCase() === valueTerm.toLowerCase());
                     break;
@@ -21,9 +20,6 @@
                     break;
                 case "car_company":
                     data = data.filter((car) => car.car_company.toLowerCase().includes(valueTerm));
-                    break;
-                case "car_year":
-                    data = data.filter((car) => car.car_year.toLowerCase().includes(valueTerm));
                     break;
                 case "car_color":
                      data = data.filter((car) => car.car_color.toLowerCase().includes(valueTerm));
@@ -37,17 +33,12 @@
             }
         }
           
-         
-        if(cars_brand && cars_brand != "all") {
-            data = data.filter((car) => car.company.toLowerCase() === cars_brand);
-        }
-        
         resolve({ code: 200, data: data });
       });
     
     const getCarById = (id) =>
       new Promise((resolve) => {
-        const car = cars.find((car) => car.id === Number(id.trim()));
+        const car = cars.find((car) => car.id=== Number(id.trim()));
     
         if (car) {
             resolve({ code: 200, data: Array(car) });
@@ -65,7 +56,7 @@
     };
     
     // build : browerift main.js -o dist/bundle.js
-    },{"../data/mock_data.json":2}],2:[function(require,module,exports){
+    },{"../data/MOCK_DATA.json":2}],2:[function(require,module,exports){
     module.exports=[{"id":1,"first_name":"Timmy","email":"tdutson0@boston.com","gender":"Female","ip_address":"51.248.62.220","car_company":"Daewoo","car_model":"Lanos","car_color":"Indigo","year":2000},
     {"id":2,"first_name":"Ethelyn","email":"eblenkharn1@skyrock.com","gender":"Polygender","ip_address":"39.101.55.162","car_company":"Lexus","car_model":"GX","car_color":"Khaki","year":2004},
     {"id":3,"first_name":"Blane","email":"bsanford2@tinyurl.com","gender":"Male","ip_address":"202.104.126.74","car_company":"GMC","car_model":"Sonoma","car_color":"Goldenrod","year":2000},
@@ -267,7 +258,7 @@
     {"id":199,"first_name":"Dyanne","email":"dromushkin5i@thetimes.co.uk","gender":"Female","ip_address":"100.79.141.179","car_company":"Cadillac","car_model":"Escalade EXT","car_color":"Crimson","year":2007},
     {"id":200,"first_name":"Darryl","email":"dpulford5j@exblog.jp","gender":"Male","ip_address":"214.74.34.140","car_company":"Mazda","car_model":"B-Series Plus","car_color":"Blue","year":1992}]
     },{}],3:[function(require,module,exports){
-    const { getAllCars, getCarById } = require("./api/car");
+    const { getAllCars, getCarById } = require("../api/car");
     
     const renderTable = (data) => {
       const tableBody = document.getElementById("table-body");
@@ -303,14 +294,13 @@
     const onSubmit = (event) => {
       event.preventDefault();
       const term = event.target.filters.value;
-      const cars_brand = event.target.cars_brand.value;
       const valueTerm = event.target.input.value;
       
 
       if(term === `id`) {
         getCarById(valueTerm).then(({ data }) => renderTable(data));
       } else {
-        getAllCars(term,cars_brand.toLowerCase(), valueTerm.toLowerCase()).then(({ data }) => renderTable(data));
+        getAllCars(term, valueTerm.toLowerCase()).then(({ data }) => renderTable(data));
       }
     };
     
@@ -322,4 +312,4 @@
     document.getElementById("myForm").addEventListener("submit", onSubmit);
     document.getElementById("myForm").addEventListener("reset", onReset);
     
-    },{"./api/car":1}]},{},[3]);
+    },{"../api/car":1}]},{},[3]);
