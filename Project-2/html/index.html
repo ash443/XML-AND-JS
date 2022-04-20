@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project 2</title>
+        <style>
+         
+           
+
+            table, td{
+                border: 2px solid;
+                border-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="myForm" >
+            Find: <input type="text" name="input" id="input-value-term" placeholder="Please enter Value here"/>
+           
+
+            
+
+            <br/>
+            <br/>
+            <input type="submit" value="Filter"/>
+            <input type="reset" value="Reset"/>
+        </form>
+        <br/>
+        <table>
+            <thead>
+              <th>Id</th>
+              <th>First Name</th>
+              <th>Email</th>
+              <th>Gender</th>
+              <th>IP address</th>
+              <th>Company</th>
+              <th>Car</th>
+              <th>Car color</th>
+              <th>Car Year</th>
+              
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+          <script type="text/javascript" src="./car.js"></script>
+    </body>
+</html>
